@@ -23,8 +23,15 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "stylelint": "stylelint --ignore-path .gitignore '**/*.(css|tsx|ts)'",
-    "lint": "eslint ."
+    "stylelint": "stylelint --ignore-path .gitignore '**/*.(css|tsx|ts)' --fix",
+    "lint": "eslint .",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "**/*.{ts,tsx}": [
+      "stylelint --fix",
+      "eslint"
+    ]
   },
   "eslintConfig": {
     "extends": [
@@ -52,11 +59,13 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.28.0",
+    "lint-staged": "^12.3.5",
     "postcss-syntax": "^0.36.2",
     "prettier": "^2.5.1",
     "stylelint": "^14.5.3",
     "stylelint-config-prettier": "^9.0.3",
     "stylelint-config-recess-order": "^3.0.0",
-    "stylelint-config-standard": "^25.0.0"
+    "stylelint-config-standard": "^25.0.0",
+    "husky": "^7.0.0"
   }
 }
