@@ -25,7 +25,8 @@
     "eject": "react-scripts eject",
     "stylelint": "stylelint --ignore-path .gitignore '**/*.(css|tsx|ts)' --fix",
     "lint": "eslint .",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "lint-staged": "lint-staged"
   },
   "lint-staged": {
     "**/*.{ts,tsx}": [
