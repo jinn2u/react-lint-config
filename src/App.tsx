@@ -1,8 +1,8 @@
 import styled from '@emotion/styled';
 
 const Title = styled.h2`
-  background-color: red;
   font-size: 1.5rem;
+  background-color: red;
 `;
 
 function App() {
